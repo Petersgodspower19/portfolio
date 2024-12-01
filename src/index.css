@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Poppins", serif;
+}
+.icon{
+  background: url("./assets/Vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+}
+/* .footer {
+  background: url("./assets/wave.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
