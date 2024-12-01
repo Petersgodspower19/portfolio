@@ -3,12 +3,12 @@ import hero from "../../assets/dev.svg";
 import docmed from "../home/img/docMed.png";
 import antimuse from "../home/img/antiMuse.png";
 import countries from "../home/img/countries.png";
-import certificate from "../home/img/certification.png"
+import certificate from "../home/img/certification.png";
 import { NavLink } from "react-router-dom";
-import email from "../home/img/email.png"
-import github from "../home/img/github.png"
-import instagram from "../home/img/instagram.png"
-import linkedin from "../home/img/linkedin.png"
+import email from "../home/img/email.png";
+import github from "../home/img/github.png";
+import instagram from "../home/img/instagram.png";
+import linkedin from "../home/img/linkedin.png";
 
 const homeProjects = [
   {
@@ -17,7 +17,7 @@ const homeProjects = [
       "A modern, responsive hospital interface built to showcase services and streamline user interactions.",
     image: docmed,
     link: "https://docmed-frontend.vercel.app/",
-    tools: "ReactJs, tailwind css, Javascript"
+    tools: "ReactJs, Tailwind CSS, JavaScript",
   },
   {
     name: "AntiMuse Clothing Brand Website",
@@ -25,7 +25,7 @@ const homeProjects = [
       "A sleek and stylish e-commerce website for a clothing brand with dynamic content and user-friendly navigation.",
     image: antimuse,
     link: "https://anti-muse.vercel.app/",
-     tools: "ReactJs, tailwind css, Javascript, Redux Took Kit"
+    tools: "ReactJs, Tailwind CSS, JavaScript, Redux Toolkit",
   },
   {
     name: "Countries Explorer",
@@ -33,58 +33,64 @@ const homeProjects = [
       "An interactive app to explore countries, their details, and statistics using an API.",
     image: countries,
     link: "https://seecountries.vercel.app/",
-     tools: "ReactJs, tailwind css, Javascript, API"
+    tools: "ReactJs, Tailwind CSS, JavaScript, API",
   },
 ];
 
 function Home() {
   return (
-    <div>
+    <div className="space-y-12">
       {/* Hero Section */}
-      <div className="mt-11 p-12 flex flex-col-reverse md:flex-row items-center justify-around gap-8 bg-gradient-to-r from-white to-blue-50 shadow-md rounded-lg">
-        <div className="w-full md:w-[550px] flex flex-col items-center md:items-start
-       text-center md:text-start gap-4">
-          <h3 className="text-darkBlue font-light text-lg tracking-wide">Hi!</h3>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-darkBlue leading-[40px]">
-            I'm Peters Godspower, a Front-End Developer
-          </h1>
-
-          <div className="flex items-start gap-2">
-           <a  href="mailto:petersgodspower95@gmail.com" className="no-underline icon">
-            <img src={email} alt="" />
-           </a>
-           <a  href="https://github.com/Petersgodspower19" className="no-underline icon">
-            <img src={github} alt="" />
-           </a>
-           <a  href="https://www.instagram.com/petersgodspower_/" className="no-underline icon">
-            <img src={instagram} alt="" />
-           </a>
-
-           <a  href="https://www.linkedin.com/in/peters-godspower-51a523314/" className="no-underline icon">
-            <img src={linkedin} alt="" />
-           </a>
-
+      <section className="p-8 md:p-16 bg-gradient-to-r from-white to-blue-50 shadow-md rounded-lg">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-10">
+          {/* Text Section */}
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+            <h3 className="text-darkBlue font-light text-lg tracking-wide">Hi!</h3>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-darkBlue leading-tight">
+              I'm Peters Godspower, a Front-End Developer
+            </h1>
+            <p className="text-darkBlue text-lg leading-relaxed">
+              Passionate front-end developer specializing in crafting visually appealing, responsive, and user-friendly interfaces. Proficient in React.js, CSS frameworks, and modern tools to bring designs to life with precision. Experienced in collaborating with designers and back-end teams to deliver seamless web experiences. Dedicated to continuous learning and pushing the boundaries of front-end technologies.
+            </p>
+            {/* Social Links */}
+            <div className="flex items-center gap-4 mt-4">
+              <a href="mailto:petersgodspower95@gmail.com">
+                <img src={email} alt="Email" className="w-8 h-8 icon" />
+              </a>
+              <a href="https://github.com/Petersgodspower19">
+                <img src={github} alt="GitHub" className="w-8 h-8 icon" />
+              </a>
+              <a href="https://www.instagram.com/petersgodspower_/">
+                <img src={instagram} alt="Instagram" className="w-8 h-8 icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/peters-godspower-51a523314/">
+                <img src={linkedin} alt="LinkedIn" className="w-8 h-8 icon" />
+              </a>
+            </div>
+            {/* Call-to-action */}
+            <NavLink
+              to="/projects"
+              className="inline-block px-6 py-3 mt-6 bg-darkBlue text-white rounded-full shadow-lg hover:bg-blue-600 transition">
+              My Projects
+            </NavLink>
           </div>
-          <p className="text-darkBlue text-lg leading-relaxed">
-            Passionate front-end developer specializing in crafting visually appealing, responsive, and user-friendly interfaces. Proficient in React.js, CSS frameworks, and modern tools to bring designs to life with precision. Experienced in collaborating with designers and back-end teams to deliver seamless web experiences. Dedicated to continuous learning and pushing the boundaries of front-end technologies.
-          </p>
-          <button className="mt-4 px-6 py-2 bg-darkBlue text-white rounded-full shadow-lg hover:bg-blue-600 transition">
-            <NavLink className="no-underline" to="/projects">My Projects</NavLink>
-          </button>
+          {/* Hero Image */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img src={hero} alt="Developer illustration" className="w-3/4 md:w-full" />
+          </div>
         </div>
-        <img src={hero} alt="Developer illustration" className="w-[300px] md:w-[550px]" />
-      </div>
+      </section>
 
       {/* Portfolio Section */}
-      <div className="mt-12 p-6">
+      <section className="p-6">
         <h2 className="text-4xl uppercase font-bold text-darkBlue mb-8 text-center">
           My Projects
         </h2>
-        <div className="flex items-center justify-center gap-5 flex-wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {homeProjects.map((project, index) => (
             <div
               key={index}
-              className="relative bg-white shadow-lg w-[350px] rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer"
+              className="relative bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 cursor-pointer"
               onClick={() => window.open(project.link, "_blank")}
             >
               <img
@@ -105,15 +111,22 @@ function Home() {
           ))}
         </div>
         <div className="text-center mt-6">
-        <NavLink to="/projects" className=" text-darkBlue hover:text-themePurple 
-        tracking-[4px] uppercase font-light text-[18px] text-center m-auto">
-          View More &#8594;
-        </NavLink>
+          <NavLink
+            to="/projects"
+            className="text-darkBlue hover:text-themePurple tracking-wider uppercase font-light text-lg">
+            View More &#8594;
+          </NavLink>
         </div>
-      </div>
-      <div className="m-auto mt-6 mb-6">
-        <img src={certificate} alt="certificatons" className="w-[80%] md:w-[500px] m-auto" />
-      </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="text-center">
+        <img
+          src={certificate}
+          alt="Certifications"
+          className="w-4/5 md:w-[500px] mx-auto shadow-lg rounded-lg"
+        />
+      </section>
     </div>
   );
 }
